@@ -1,4 +1,5 @@
 setuptools
+twine
 
 git+https://github.com/BD103/2black.git@21.5b2
 isort
