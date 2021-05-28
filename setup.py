@@ -17,7 +17,7 @@ setuptools.setup(
     "Repository": "https://github.com/BD103/Ballad",
     "Bug Tracker": "https://github.com/BD103/Ballad/issues",
   },
-  install_requires=["toml>=0.10.2", "click>=8.0.1"],
+  install_requires=["tomlkit==0.5.11", "click>=8.0.1"],
   classifiers=[
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",

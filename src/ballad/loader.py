@@ -1,39 +1,40 @@
 import os
+import subprocess
 
-import toml
-
-from .installer import install
-
-
-class PyprojectError(Exception):
-  pass
+import tomlkit
 
 
-def _get_pyproject() -> dict:
-  if not os.path.exists("pyproject.toml"):
-    raise FileNotFoundError("pyproject.toml does not exist")
-    return None
+def _check_lock() -> bool:
+  if not os.path.isfile("poetry.lock"):
+    raise FileNotFoundError("Cannot find poetry.lock")
+    return False
+  else:
+    return True
 
-  with open("pyproject.toml", "rt") as fp:
-    return toml.load(fp)
+
+def _get_lock() -> dict:
+  if _check_lock():
+    with open("poetry.lock", "rt") as fp:
+      return tomlkit.parse(fp.read())["package"]
+  else:
+    return {}
 
 
-def load():
-  pypr = _get_pyproject()
+def _install(i: dict, quiet: str = "-qq", debug: bool = False):
+  if debug:
+    print("Installing", i["name"], "==", i["version"])
 
-  if (
-    not pypr["build-system"]["requires"][0].startswith("poetry")
-    or not pypr["build-system"]["build-backend"] == "poetry.masonry.api"
-  ):
-    raise PyprojectError("[build-system] doesn't follow Poetry specification")
+  subprocess.run(
+    ["python", "-m", "pip", "install", quiet, i["name"] + "==" + str(i["version"])]
+  )
 
-  if pypr["tool"]["poetry"].get("dependencies"):
-    for dep in pypr["tool"]["poetry"]["dependencies"]:
-      if dep == "python":
-        continue
 
-      install(dep)
+def load_all(quiet: str = "-qq", debug: bool = False):
+  for i in _get_lock():
+    _install(i, quiet, debug)
 
-  if pypr["tool"]["poetry"].get("dev-dependencies"):
-    for dep in pypr["tool"]["poetry"]["dev-dependencies"]:
-      install(dep)
+
+def load_production(quiet: str = "-qq", debug: bool = False):
+  for i in _get_lock():
+    if i["category"] == "main":
+      _install(i, quiet, debug)

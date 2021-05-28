@@ -2,8 +2,6 @@ README.md
 setup.py
 src/ballad/__init__.py
 src/ballad/__main__.py
-src/ballad/depspec.py
-src/ballad/installer.py
 src/ballad/loader.py
 src/ballad.egg-info/PKG-INFO
 src/ballad.egg-info/SOURCES.txt
