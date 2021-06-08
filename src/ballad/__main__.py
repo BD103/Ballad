@@ -1,6 +1,7 @@
 import click
 
 from . import loader
+from .tests import convert_lock as _convert_lock
 
 
 @click.group()
@@ -18,6 +19,14 @@ def install(dev_dep: bool, debug: bool):
     loader.load_all(debug=debug)
   else:
     loader.load_production(debug=debug)
+
+
+@cli.command()
+@click.option("-l", "--lock", default="poetry.lock")
+@click.option("-o", "--output", default="poetry.json")
+def convert_lock(lock, output):
+  """Exports poetry.lock to poetry.json"""
+  _convert_lock(lock=lock, output=output)
 
 
 if __name__ == "__main__":
