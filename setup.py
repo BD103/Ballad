@@ -6,7 +6,7 @@ with open("README.md", "rt") as fp:
 
 setuptools.setup(
   name="ballad",
-  version="1.0.0",
+  version="1.1.0",
   author="BD103",
   author_email="dont@stalk.me",
   description="For when Poetry just doesn't work.",
