@@ -51,6 +51,10 @@ class Ballad(object):
       return f"{table['name']}=={str(table['version'])}"
     elif table["source"]["type"] == "git":
       return f"git+{table['source']['url']}@{table['source']['resolved_reference']}#egg={table['name']}"
+    elif table["source"]["type"] == "url":
+      return table["source"]["url"]
+    elif table["source"]["type"] == "file":
+      return table["source"]["url"]
     else:
       return "ballad"
 
