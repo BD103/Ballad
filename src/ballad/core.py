@@ -45,7 +45,14 @@ class Ballad(object):
         Returns:
           str: String to be appended to ``pip install`` command
         """
-    return f"{table['name']}=={str(table['version'])}"
+
+    # If PyPI dep
+    if not table.get("source"):
+      return f"{table['name']}=={str(table['version'])}"
+    elif table["source"]["type"] == "git":
+      return f"git+{table['source']['url']}@{table['source']['resolved_reference']}#egg={table['name']}"
+    else:
+      return "ballad"
 
   def install_identifier(self, table: dict, verbose: bool = False):
     """Installs specific dependency from item in lockfile table.
