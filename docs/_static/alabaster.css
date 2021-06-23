@@ -3,7 +3,7 @@
 /* -- page layout ----------------------------------------------------------- */
 
 body {
-    font-family: Georgia, serif;
+    font-family: "Helvetica", "Arial", sans-serif;
     font-size: 17px;
     background-color: #fff;
     color: #000;
@@ -107,7 +107,7 @@ div.sphinxsidebarwrapper p.blurb {
 
 div.sphinxsidebar h3,
 div.sphinxsidebar h4 {
-    font-family: Georgia, serif;
+    font-family: "Georgia", serif;
     color: #444;
     font-size: 24px;
     font-weight: normal;
@@ -151,7 +151,7 @@ div.sphinxsidebar ul li.toctree-l2 > a {
 
 div.sphinxsidebar input {
     border: 1px solid #CCC;
-    font-family: Georgia, serif;
+    font-family: "Helvetica", "Arial", sans-serif;
     font-size: 1em;
 }
 
@@ -182,12 +182,12 @@ div.sphinxsidebar h3.donation {
 /* -- body styles ----------------------------------------------------------- */
 
 a {
-    color: #004B6B;
+    color: #006699;
     text-decoration: underline;
 }
 
 a:hover {
-    color: #6D4100;
+    color: #0099FF;
     text-decoration: underline;
 }
 
@@ -197,7 +197,7 @@ div.body h3,
 div.body h4,
 div.body h5,
 div.body h6 {
-    font-family: Georgia, serif;
+    font-family: "Georgia", serif;
     font-weight: normal;
     margin: 30px 0px 10px 0px;
     padding: 0;
@@ -211,14 +211,14 @@ div.body h5 { font-size: 100%; }
 div.body h6 { font-size: 100%; }
 
 a.headerlink {
-    color: #DDD;
+    color: #00AA88;
     padding: 0 4px;
     text-decoration: none;
 }
 
 a.headerlink:hover {
-    color: #444;
-    background: #EAEAEA;
+    color: #336666;
+    background: transparent;
 }
 
 div.body p, div.body dd, div.body li {
@@ -238,7 +238,7 @@ div.admonition tt.xref, div.admonition code.xref, div.admonition a tt {
 }
 
 div.admonition p.admonition-title {
-    font-family: Georgia, serif;
+    font-family: "Georgia", serif;
     font-weight: normal;
     font-size: 24px;
     margin: 0 0 10px 0;
@@ -467,7 +467,7 @@ tt.xref, code.xref, a tt {
 
 a.reference {
     text-decoration: none;
-    border-bottom: 1px dotted #004B6B;
+    border-bottom: 1px dotted #006699;
 }
 
 /* Don't put an underline on images */
@@ -476,18 +476,18 @@ a.image-reference, a.image-reference:hover {
 }
 
 a.reference:hover {
-    border-bottom: 1px solid #6D4100;
+    border-bottom: 1px solid #0099FF;
 }
 
 a.footnote-reference {
     text-decoration: none;
     font-size: 0.7em;
     vertical-align: top;
-    border-bottom: 1px dotted #004B6B;
+    border-bottom: 1px dotted #006699;
 }
 
 a.footnote-reference:hover {
-    border-bottom: 1px solid #6D4100;
+    border-bottom: 1px solid #0099FF;
 }
 
 a:hover tt, a:hover code {
