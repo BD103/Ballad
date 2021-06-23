@@ -1,19 +1,32 @@
 Ballad's documentation!
 =======================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   patch-notes
-   api
-
-
 Ballad is a package designed to handle dependency installation when Poetry might be unavailable.
 
-Indices and Tables
-==================
+Ballad is mainly used for (and was created for) Github actions. This was because Poetry failed to register packages, thus commands were raising errors.
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+Guide
+-----
+
+.. toctree::
+   :maxdepth: 2
+
+   installation
+   quickstart
+   advanced-usage
+
+API
+---
+
+.. toctree::
+   :maxdepth: 2
+
+   api
+
+Additional Pages
+----------------
+
+.. toctree::
+   :maxdepth: 2
+
+   patch-notes
