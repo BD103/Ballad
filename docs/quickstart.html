@@ -6,17 +6,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Ballad’s documentation! &#8212; Ballad 2.0.0 documentation</title>
+    <title>Quickstart &#8212; Ballad 2.0.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <link rel="canonical" href="https://bd103.thedev.id/Ballad/index.html" />
+    <link rel="canonical" href="https://bd103.thedev.id/Ballad/quickstart.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="next" title="Advanced Usage" href="advanced-usage.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -33,48 +34,40 @@
 
           <div class="body" role="main">
             
-  <section id="ballad-s-documentation">
-<h1>Ballad’s documentation!<a class="headerlink" href="#ballad-s-documentation" title="Permalink to this headline">#</a></h1>
-<p>Ballad is a package designed to handle dependency installation when Poetry might be unavailable.</p>
-<p>Ballad is mainly used for (and was created for) Github actions. This was because Poetry failed to register packages, thus commands were raising errors.</p>
-<section id="guide">
-<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#dependencies">Dependencies</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced-usage.html">Advanced Usage</a></li>
-</ul>
+  <section id="quickstart">
+<h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">#</a></h1>
+<p>Ballad has many reasonable defaults, so you usually won’t find a need to configure anything.</p>
+<p>Ballad is meant to be run in the command line, but it also supports a Python API.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -m ballad --help
+<span class="go">Usage: python -m ballad [OPTIONS] COMMAND [ARGS]...</span>
+
+<span class="go">  Install Poetry Project without Poetry</span>
+
+<span class="go">Options:</span>
+<span class="go">  --help  Show this message and exit.</span>
+
+<span class="go">Commands:</span>
+<span class="go">  convert-lock  Reads lockfile, convert it to JSON, then outputs...</span>
+<span class="go">  install       Install dependencies from lockfile using PIP</span>
+</pre></div>
 </div>
-</section>
-<section id="api">
-<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api.html#core-py">core.py</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html#utils-py">utils.py</a></li>
-</ul>
-</li>
-</ul>
+<p>The CLI exposes the most useful command of Ballad, <code class="docutils literal notranslate"><span class="pre">install</span></code>.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -m ballad install --help
+<span class="go">Usage: python -m ballad install [OPTIONS]</span>
+
+<span class="go">  Install dependencies from lockfile using PIP</span>
+
+<span class="go">Options:</span>
+<span class="go">  -d, --development / -p, --production</span>
+<span class="go">  -l, --lockfile TEXT</span>
+<span class="go">  -q, --quiet</span>
+<span class="go">  --help                          Show this message and exit.</span>
+</pre></div>
 </div>
-</section>
-<section id="additional-pages">
-<h2>Additional Pages<a class="headerlink" href="#additional-pages" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="patch-notes.html">Patch Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="patch-notes.html#id2">2.0.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="patch-notes.html#id6">1.1.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="patch-notes.html#id8">1.0.0</a></li>
-</ul>
-</li>
-</ul>
+<p>The install command has many sensible defaults. For one, it assumes that you want to install your development dependencies. It also assumes that your lockfile name is <code class="docutils literal notranslate"><span class="pre">poetry.lock</span></code>. All you need to do is run:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python -m ballad install
+</pre></div>
 </div>
-</section>
 </section>
 
 
@@ -84,7 +77,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="#">Ballad</a></h1>
+<h1 class="logo"><a href="index.html">Ballad</a></h1>
 
 
 
@@ -103,9 +96,9 @@
 
 
 <h3>Navigation</h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="advanced-usage.html">Advanced Usage</a></li>
 </ul>
 <ul>
@@ -118,8 +111,9 @@
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
-  <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="installation.html" title="next chapter">Installation</a></li>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="installation.html" title="previous chapter">Installation</a></li>
+      <li>Next: <a href="advanced-usage.html" title="next chapter">Advanced Usage</a></li>
   </ul></li>
 </ul>
 </div>
@@ -153,7 +147,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/index.rst.txt"
+      <a href="_sources/quickstart.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 

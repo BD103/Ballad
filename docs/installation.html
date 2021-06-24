@@ -6,17 +6,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Ballad’s documentation! &#8212; Ballad 2.0.0 documentation</title>
+    <title>Installation &#8212; Ballad 2.0.0 documentation</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <link rel="canonical" href="https://bd103.thedev.id/Ballad/index.html" />
+    <link rel="canonical" href="https://bd103.thedev.id/Ballad/installation.html" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installation" href="installation.html" />
+    <link rel="next" title="Quickstart" href="quickstart.html" />
+    <link rel="prev" title="Ballad’s documentation!" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -33,47 +34,25 @@
 
           <div class="body" role="main">
             
-  <section id="ballad-s-documentation">
-<h1>Ballad’s documentation!<a class="headerlink" href="#ballad-s-documentation" title="Permalink to this headline">#</a></h1>
-<p>Ballad is a package designed to handle dependency installation when Poetry might be unavailable.</p>
-<p>Ballad is mainly used for (and was created for) Github actions. This was because Poetry failed to register packages, thus commands were raising errors.</p>
-<section id="guide">
-<h2>Guide<a class="headerlink" href="#guide" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="installation.html#dependencies">Dependencies</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advanced-usage.html">Advanced Usage</a></li>
-</ul>
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h1>
+<p>The easiest method of getting Ballad is to use PIP.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install ballad
+</pre></div>
 </div>
-</section>
-<section id="api">
-<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="api.html">API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api.html#core-py">core.py</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html#utils-py">utils.py</a></li>
-</ul>
-</li>
-</ul>
+<p>If you are a developer, or want those <em>really</em> fresh features, you can clone the source.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>git clone https://github.com/BD103/Ballad.git
+<span class="gp">$ </span><span class="nb">cd</span> Ballad
+<span class="gp">$ </span>pip install -r requirements.txt
+</pre></div>
 </div>
-</section>
-<section id="additional-pages">
-<h2>Additional Pages<a class="headerlink" href="#additional-pages" title="Permalink to this headline">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="patch-notes.html">Patch Notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="patch-notes.html#id2">2.0.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="patch-notes.html#id6">1.1.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="patch-notes.html#id8">1.0.0</a></li>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">#</a></h2>
+<p>Ballad has two main dependencies:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/click">Click</a> for easy command-line interfaces</p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/tomlkit">Tomlkit</a> for reading lockfiles. (This comes with Poetry as well.)</p></li>
 </ul>
-</li>
-</ul>
-</div>
 </section>
 </section>
 
@@ -84,7 +63,7 @@
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="#">Ballad</a></h1>
+<h1 class="logo"><a href="index.html">Ballad</a></h1>
 
 
 
@@ -103,8 +82,11 @@
 
 
 <h3>Navigation</h3>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="advanced-usage.html">Advanced Usage</a></li>
 </ul>
@@ -118,8 +100,9 @@
 <div class="relations">
 <h3>Related Topics</h3>
 <ul>
-  <li><a href="#">Documentation overview</a><ul>
-      <li>Next: <a href="installation.html" title="next chapter">Installation</a></li>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Ballad’s documentation!</a></li>
+      <li>Next: <a href="quickstart.html" title="next chapter">Quickstart</a></li>
   </ul></li>
 </ul>
 </div>
@@ -153,7 +136,7 @@
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/index.rst.txt"
+      <a href="_sources/installation.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
