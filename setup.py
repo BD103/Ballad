@@ -6,7 +6,7 @@ with open("README.md", "rt") as fp:
 
 setuptools.setup(
   name="ballad",
-  version="1.1.0",
+  version="2.0.0",
   author="BD103",
   author_email="dont@stalk.me",
   description="For when Poetry just doesn't work.",
@@ -17,7 +17,7 @@ setuptools.setup(
     "Repository": "https://github.com/BD103/Ballad",
     "Bug Tracker": "https://github.com/BD103/Ballad/issues",
   },
-  install_requires=["tomlkit==0.5.11", "click>=8.0.1"],
+  install_requires=["tomlkit>=0.7.0,<1.0.0", "click>=8.0.1"],
   classifiers=[
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",
