@@ -1,0 +1,5 @@
+run = "python -m http.server 8000 -d docsrc/_build/html"
+language = "python3"
+
+[packager]
+ignoredPaths = ["."]
