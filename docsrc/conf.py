@@ -33,13 +33,13 @@ _html_theme_colors = {
   "anchor_hover_fg": "#336666",
   "link": "#006699",
   "link_hover": "#0099FF",
-  "font_family": "\"Helvetica\", \"Arial\", sans-serif",
-  "head_font_family": "\"Georgia\", serif"
+  "font_family": '"Helvetica", "Arial", sans-serif',
+  "head_font_family": '"Georgia", serif',
 }
 
 html_theme_options = {
   "github_user": "BD103",
   "github_repo": "Ballad",
   "description": "For when Poetry just doesn't work.",
-  **_html_theme_colors
+  **_html_theme_colors,
 }
